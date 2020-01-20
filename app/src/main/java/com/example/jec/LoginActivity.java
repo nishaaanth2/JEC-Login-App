@@ -1,6 +1,8 @@
 package com.example.jec;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -48,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.apply();
                     Toast.makeText(LoginActivity.this,regname+regpass, Toast.LENGTH_SHORT).show();
                 }
+                Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
     }
