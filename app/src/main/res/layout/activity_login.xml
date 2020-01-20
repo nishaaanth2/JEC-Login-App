@@ -25,54 +25,57 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:fontFamily="@font/montserratbold"
-        android:text="Log In"
+        android:text="Sign In"
         android:textColor="#000000"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@id/linearlayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_chainStyle="packed" />
-
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/linearlayout2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Registration Number"
-        android:fontFamily="@font/montserratmedium"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="24dp"
+        android:fontFamily="@font/montserratmedium"
+        android:hint="Registration Number"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
         app:layout_constraintBottom_toTopOf="@+id/linearlayout1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusTopEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusTopStart="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainlogintext">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mainreg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:padding="12dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratmedium" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/linearlayout1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:fontFamily="@font/montserratmedium"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="24dp"
+        android:fontFamily="@font/montserratmedium"
+        android:hint="Password"
         app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
         app:layout_constraintBottom_toTopOf="@+id/lastlayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,23 +83,23 @@
         app:layout_constraintTop_toBottomOf="@+id/linearlayout2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/mainpass"
-
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratmedium" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
         android:id="@+id/lastlayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="24dp"
         app:layout_constraintBottom_toTopOf="@+id/mainbtnlogin"
-        app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
-        >
+        app:layout_constraintEnd_toEndOf="@+id/linearlayout1"
+        app:layout_constraintStart_toStartOf="@+id/linearlayout1"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout1">
 
         <CheckBox
             android:id="@+id/mainremberme"
@@ -121,16 +124,53 @@
 
     <Button
         android:id="@+id/mainbtnlogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         android:background="@drawable/loingbuttonstyle"
         android:fontFamily="@font/montserratmedium"
         android:padding="8dp"
-        android:text="Login"
+        android:text="Sign In"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="19sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearlayout1"
+        app:layout_constraintStart_toStartOf="@+id/linearlayout1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mainbtnlogin"
+        app:layout_constraintStart_toStartOf="@+id/mainbtnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/mainbtnlogin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratmedium"
+            android:text="New student? " />
+
+        <TextView
+            android:id="@+id/clicktoregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Click here to register"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/montserratmedium"
+        android:text="© 2001-2019, Jeppiaar Group of Institutions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
