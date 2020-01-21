@@ -91,9 +91,10 @@
             android:layout_width="match_parent"
             android:padding="12dp"
             android:maxLines="1"
-            android:inputType="textPassword"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserratmedium" />
+            android:fontFamily="@font/montserratmedium"
+            android:inputType="textPassword"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
