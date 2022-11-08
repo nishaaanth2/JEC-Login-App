@@ -1,4 +1,5 @@
 # Jeppiaar Engineering College App
+![](https://github.com/nishaaanth2/jec/blob/master/telegram_video.gif)
 
 
 ## Author
